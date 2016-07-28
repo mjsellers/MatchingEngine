@@ -10,16 +10,16 @@ public:
 	// Constructor takes in Publisher, Feedback and Validator classes
 	OrderBook(iPublisher& p, iFeedback& f, iValidator& v);
 	virtual ~OrderBook();
-	int AddOrder();
+	bool AddOrder(Order& o);
 private:
 	side *mBuy;
 	side *mSell;
+	orderindex* mIDIndex;
 
 	iPublisher& pub;
 	iFeedback& feed;
 	iValidator& val;
 
-	map <long, BookEntry*> mIDIndex;
 
 
 

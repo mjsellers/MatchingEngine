@@ -5,11 +5,13 @@
 ProcessorFactory::ProcessorFactory(iPublisher& p, iFeedback& f)
 	: pub (p), feed(f)
 {
+	mContinuous = NULL;
 }
-
 
 ProcessorFactory::~ProcessorFactory()
 {
+	if (mContinuous != NULL)
+		delete mContinuous;
 }
 
 iMatchProcessor* ProcessorFactory::Get(marketstatus s)

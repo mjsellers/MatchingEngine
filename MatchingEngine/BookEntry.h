@@ -3,8 +3,10 @@
 struct BookEntry
 {
 public:
-	long vol;
-	long ID;
+	BookEntry(long vol, long ID)
+		: mvol(vol), mID(ID), pDecorator(NULL) {}
+	long mvol;
+	long mID;
 	ItemDecorator * pDecorator;
 
 };

@@ -4,23 +4,33 @@ enum buysell
 {
 	buy = 0, sell = 1
 };
-enum type
+enum ordtype
 {
-	limit, market, fok, elim
+	limit, market, fok, elim, iceberg
+};
+enum action
+{
+	create, amend, cancel
 };
 
 
 class Order
 {
 public:
-	Order(long size, buysell side, double price, type ordertype, long ID);
-	long ID();
+	Order(action act, long size, buysell side, double price, ordtype ordertype, long ID);
+	action act();
+	long size();
+	buysell side();
+	double price();
+	ordtype ordertype();
+	long ID(); 
 	virtual ~Order();
 private:
-	long size;
-	buysell side;
-	double price;
-	type ordertype;
+	action maction;
+	long msize;
+	buysell mside;
+	double mprice;
+	ordtype mordertype;
 	long mID;
 
 

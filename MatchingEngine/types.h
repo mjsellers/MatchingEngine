@@ -4,5 +4,7 @@
 #include "BookEntry.h"
 using namespace std;
 
-typedef map <double, queue <BookEntry>> side;
+typedef map <double, queue <BookEntry>*> side;
+typedef map <long, BookEntry*> orderindex;
+
 

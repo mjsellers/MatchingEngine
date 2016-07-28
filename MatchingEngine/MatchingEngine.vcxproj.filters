@@ -71,9 +71,6 @@
     <ClCompile Include="Order.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="iFeedback.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ProcessorFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

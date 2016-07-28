@@ -157,7 +157,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ContinuousProcessor.cpp" />
-    <ClCompile Include="iFeedback.cpp" />
     <ClCompile Include="MatchingEngine.cpp" />
     <ClCompile Include="Order.cpp" />
     <ClCompile Include="OrderBook.cpp" />

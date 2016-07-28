@@ -2,6 +2,7 @@
 #include "Order.h"
 #include "iPublisher.h"
 #include "iFeedback.h"
+#include "types.h"
 
 class iMatchProcessor
 {
@@ -15,8 +16,9 @@ public:
 	virtual ~iMatchProcessor()
 	{
 	}
-	virtual int Process(Order o) = 0;
+	virtual bool Process(Order o, side* buy, side* sell, orderindex* idx) = 0;
 
+private:
 	iPublisher& pub;
 	iFeedback& feed;
 
